@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.25rem;
+    /* near-black #0b0f0d */
+    --background: 0.1 0.008 160;
+    /* off-white #f2f4f3 */
+    --foreground: 0.96 0.006 155;
+    --card: 0.12 0.008 160;
+    --card-foreground: 0.96 0.006 155;
+    --popover: 0.14 0.008 160;
+    --popover-foreground: 0.96 0.006 155;
+    /* dark crimson #8b0000 */
+    --primary: 0.38 0.17 25;
+    --primary-foreground: 0.96 0.006 155;
+    /* gray-green border #3a4742 */
+    --secondary: 0.32 0.025 168;
+    --secondary-foreground: 0.96 0.006 155;
+    --muted: 0.18 0.008 160;
+    --muted-foreground: 0.6 0.006 155;
+    --accent: 0.42 0.18 25;
+    --accent-foreground: 0.96 0.006 155;
+    --destructive: 0.45 0.22 25;
+    --destructive-foreground: 0.96 0.006 155;
+    --border: 0.32 0.025 168;
+    --input: 0.18 0.008 160;
+    --ring: 0.42 0.18 25;
+    --chart-1: 0.45 0.22 25;
+    --chart-2: 0.38 0.17 25;
+    --chart-3: 0.32 0.025 168;
+    --chart-4: 0.6 0.006 155;
+    --chart-5: 0.96 0.006 155;
+    --sidebar: 0.12 0.008 160;
+    --sidebar-foreground: 0.96 0.006 155;
+    --sidebar-primary: 0.38 0.17 25;
+    --sidebar-primary-foreground: 0.96 0.006 155;
+    --sidebar-accent: 0.32 0.025 168;
+    --sidebar-accent-foreground: 0.96 0.006 155;
+    --sidebar-border: 0.32 0.025 168;
+    --sidebar-ring: 0.42 0.18 25;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "General Sans", system-ui, sans-serif;
+  }
+}
+
+@keyframes pulse-warning {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.85;
+  }
+  75% {
+    opacity: 0.95;
+  }
+}
+
+@keyframes blood-drip {
+  0% {
+    transform: translateY(-4px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+}
